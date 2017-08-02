@@ -58,6 +58,7 @@ namespace Introspeccion
 
         public static List<Generic> ToGeneric(IEnumerable<Object> list) {
 
+            //Esta linea hace lo mismo que todo lo de abajo
             return list.Select(c => new Generic { Obj = c, Type = c.GetType() }).toList();
 
             var generics = new List<Generic>();
