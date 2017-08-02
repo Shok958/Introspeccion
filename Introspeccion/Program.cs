@@ -28,7 +28,7 @@ namespace Introspeccion
 
     public class Generic
     {
-         
+        public     
     }
 
     public class Person {
@@ -58,7 +58,13 @@ namespace Introspeccion
 
         public static List<Generic> ToGeneric(IEnumerable<Object> list) {
 
+            return list.Select(c => new Generic { Obj = c, Type = c.GetType() }).toList();
 
+            var generics = new List<Generic>();
+            foreach (var obj in list) {
+                generics.Add(new Generic() { Obj = obj, Type = obj.GetType });
+            }
+            return generics;
         }
 
     }
