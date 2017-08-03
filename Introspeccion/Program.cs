@@ -69,4 +69,19 @@ namespace Introspeccion
         }
 
     }
+
+    class Sql {
+        Sql(List<Generic> generic);
+        protected sb = new StringBuilder();
+        public virtual StringBuilder getSql() {
+            return sb.toString();
+        } 
+    }
+
+    class Insert : Sql {
+        public override StringBuilder getSql()
+        {
+            return base.getSql();
+        }
+    }
 }
