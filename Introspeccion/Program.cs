@@ -71,7 +71,7 @@ namespace Introspeccion
     }
 
     class Sql {
-        Sql(List<Generic> generic);
+        public Sql(List<Generic> generic) { }
         protected sb = new StringBuilder();
         public virtual StringBuilder getSql() {
             return sb.toString();
@@ -81,6 +81,7 @@ namespace Introspeccion
     class Insert : Sql {
         public override StringBuilder getSql()
         {
+            public Insert(List < Generic > generic):base(Generic){ }
             return base.getSql();
         }
     }
